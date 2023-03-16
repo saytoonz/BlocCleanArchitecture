@@ -1,8 +1,9 @@
 import 'dart:convert';
-import '../../../fixtures/fixture_reader.dart';
 import 'package:flutter_test/flutter_test.dart';
+import '../../../../fixtures/fixture_reader.dart';
 import 'package:bloc_clean_architecture/features/trivial/data/models/trivia_model.dart';
 import 'package:bloc_clean_architecture/features/trivial/domain/entities/trivia_entity.dart';
+
 
 void main() {
   const testTrivialModel = TriviaModel(

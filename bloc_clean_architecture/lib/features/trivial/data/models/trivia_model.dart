@@ -1,4 +1,4 @@
-import 'package:bloc_clean_architecture/features/trivial/domain/entities/trivia_entity.dart';
+import '../../domain/entities/trivia_entity.dart';
 
 class TriviaModel extends TriviaEntity {
   const TriviaModel({
