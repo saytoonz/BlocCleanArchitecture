@@ -1,0 +1,8 @@
+{
+    "cSpell.words": [
+        "Numsber"
+    ],
+    "files.exclude": {
+        "**/*.mocks.dart": false
+      }
+}
