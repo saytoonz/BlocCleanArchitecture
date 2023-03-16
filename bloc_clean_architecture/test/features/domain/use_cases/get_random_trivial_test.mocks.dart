@@ -6,9 +6,9 @@
 import 'dart:async' as _i4;
 
 import 'package:bloc_clean_architecture/core/errors/app_error.dart' as _i5;
-import 'package:bloc_clean_architecture/features/trivial/domain/entities/trivial.dart'
+import 'package:bloc_clean_architecture/features/trivial/domain/entities/trivia_entity.dart'
     as _i6;
-import 'package:bloc_clean_architecture/features/trivial/domain/repositories/trivial_repo.dart'
+import 'package:bloc_clean_architecture/features/trivial/domain/repositories/trivia_repo.dart'
     as _i3;
 import 'package:either_dart/either.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
@@ -34,47 +34,47 @@ class _FakeEither_0<L, R> extends _i1.SmartFake implements _i2.Either<L, R> {
         );
 }
 
-/// A class which mocks [TrivialRepo].
+/// A class which mocks [TriviaRepo].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockTrivialRepo extends _i1.Mock implements _i3.TrivialRepo {
-  MockTrivialRepo() {
+class MockTriviaRepo extends _i1.Mock implements _i3.TriviaRepo {
+  MockTriviaRepo() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i4.Future<_i2.Either<_i5.AppError, _i6.TrivialEntity>> getConcreteTrivial(
+  _i4.Future<_i2.Either<_i5.AppError, _i6.TriviaEntity>> getConcreteTrivia(
           int? number) =>
       (super.noSuchMethod(
         Invocation.method(
-          #getConcreteTrivial,
+          #getConcreteTrivia,
           [number],
         ),
         returnValue:
-            _i4.Future<_i2.Either<_i5.AppError, _i6.TrivialEntity>>.value(
-                _FakeEither_0<_i5.AppError, _i6.TrivialEntity>(
+            _i4.Future<_i2.Either<_i5.AppError, _i6.TriviaEntity>>.value(
+                _FakeEither_0<_i5.AppError, _i6.TriviaEntity>(
           this,
           Invocation.method(
-            #getConcreteTrivial,
+            #getConcreteTrivia,
             [number],
           ),
         )),
-      ) as _i4.Future<_i2.Either<_i5.AppError, _i6.TrivialEntity>>);
+      ) as _i4.Future<_i2.Either<_i5.AppError, _i6.TriviaEntity>>);
   @override
-  _i4.Future<_i2.Either<_i5.AppError, _i6.TrivialEntity>> getRandomTrivial() =>
+  _i4.Future<_i2.Either<_i5.AppError, _i6.TriviaEntity>> getRandomTrivia() =>
       (super.noSuchMethod(
         Invocation.method(
-          #getRandomTrivial,
+          #getRandomTrivia,
           [],
         ),
         returnValue:
-            _i4.Future<_i2.Either<_i5.AppError, _i6.TrivialEntity>>.value(
-                _FakeEither_0<_i5.AppError, _i6.TrivialEntity>(
+            _i4.Future<_i2.Either<_i5.AppError, _i6.TriviaEntity>>.value(
+                _FakeEither_0<_i5.AppError, _i6.TriviaEntity>(
           this,
           Invocation.method(
-            #getRandomTrivial,
+            #getRandomTrivia,
             [],
           ),
         )),
-      ) as _i4.Future<_i2.Either<_i5.AppError, _i6.TrivialEntity>>);
+      ) as _i4.Future<_i2.Either<_i5.AppError, _i6.TriviaEntity>>);
 }

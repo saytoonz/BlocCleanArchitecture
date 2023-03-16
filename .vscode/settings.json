@@ -3,6 +3,6 @@
         "Numsber"
     ],
     "files.exclude": {
-        "**/*.mocks.dart": false
+        "**/*.mocks.dart": true
       }
 }

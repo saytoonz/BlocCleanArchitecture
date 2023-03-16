@@ -4,27 +4,27 @@ import 'package:mockito/annotations.dart';
 import 'get_concrete_trivial_test.mocks.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bloc_clean_architecture/core/use_cases/use_case.dart';
-import 'package:bloc_clean_architecture/features/trivial/domain/entities/trivial.dart';
-import 'package:bloc_clean_architecture/features/trivial/domain/repositories/trivial_repo.dart';
+import 'package:bloc_clean_architecture/features/trivial/domain/entities/trivia_entity.dart';
+import 'package:bloc_clean_architecture/features/trivial/domain/repositories/trivia_repo.dart';
 import 'package:bloc_clean_architecture/features/trivial/domain/use_cases/get_random_trivia_use_case.dart';
 
-@GenerateMocks([TrivialRepo])
+@GenerateMocks([TriviaRepo])
 void main() {
   late GetRandomTrivialUseCase useCase;
-  final mockTrivialRepo = MockTrivialRepo();
+  final mockTriviaRepo = MockTriviaRepo();
 
   setUp(() {
-    useCase = GetRandomTrivialUseCase(mockTrivialRepo);
+    useCase = GetRandomTrivialUseCase(mockTriviaRepo);
   });
 
   const int testNumber = 2;
-  const testTrivialEntity = TrivialEntity(text: 'text', number: testNumber);
+  const testTrivialEntity = TriviaEntity(text: 'text', number: testNumber);
 
   test(
     'should get trivial from the number repository',
     () async {
       //arrange
-      when(mockTrivialRepo.getRandomTrivial())
+      when(mockTriviaRepo.getRandomTrivia())
           .thenAnswer((realInvocation) async => const Right(testTrivialEntity));
 
       //act
@@ -32,8 +32,8 @@ void main() {
 
       //assert
       expect(result, const Right(testTrivialEntity));
-      verify(mockTrivialRepo.getRandomTrivial());
-      verifyNoMoreInteractions(mockTrivialRepo);
+      verify(mockTriviaRepo.getRandomTrivia());
+      verifyNoMoreInteractions(mockTriviaRepo);
     },
   );
 }
