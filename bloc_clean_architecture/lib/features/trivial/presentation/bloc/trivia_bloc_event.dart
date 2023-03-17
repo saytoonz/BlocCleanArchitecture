@@ -3,17 +3,17 @@ part of 'trivia_bloc_bloc.dart';
 @immutable
 abstract class TriviaBlocEvent extends Equatable {}
 
-class GetTriviaForConcreteNumber extends TriviaBlocEvent {
+class GetTriviaForConcrete extends TriviaBlocEvent {
   final String numberString;
 
-  GetTriviaForConcreteNumber(this.numberString);
+  GetTriviaForConcrete(this.numberString);
 
 //----------------------------------------------------------------
   @override
   List<Object?> get props => [numberString];
 }
 
-class GetTriviaForRandomNumber extends TriviaBlocEvent {
+class GetTriviaForRandom extends TriviaBlocEvent {
   @override
   List<Object?> get props => [<dynamic>[]];
 }
